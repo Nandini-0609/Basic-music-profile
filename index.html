@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-1">
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">MUSIC</a>
+            <a href="#">ARTISTS</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </div>
+    <div class="container-2">
+        <h1>MY<br>MUSIC</h1>
+    </div>
+    <div class="container-3">
+        <h3>Click Here To Listen</h3>
+        <img src="./play-button.png" alt="img play button" width="90px" id="icon">
+    </div>
+    <audio id="mysound">
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        let mysound=document.getElementById("mysound");
+        let icon=document.getElementById("icon");
+        icon.onclick=function(){
+            if(mysound.paused){
+                mysound.play();
+                icon.src ="pause-button.png";
+            }
+            else{
+                mysound.pause();
+                icon.src ="play-button.png";
+
+            }
+        }
+    </script>
+</body>
+</html>
